@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: server-api-2.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/server-api/2.0.0/c2e19c1aea75d95a71eae74b31d260bcc2b764b8/server-api-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.neo4j/server-api/2.0.0/66830e3782a5696c48d3faa20ac312ae1d8b757d/server-api-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,43 @@
+buildscript{
+    repositories{
+        mavenLocal()
+        maven{url "http://repo.spring.io/libs-snapshot"}
+    }
+    dependencies{
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC1")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+apply plugin: 'idea'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    maven{url "http://repo.spring.io/libs-snapshot"}
+    maven{url "http://repo.spring.io/libs-milestone"}
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web:1.0.0.RC1'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa:1.0.0.RC1'
+    compile 'org.springframework.data:spring-data-neo4j:3.0.0.RC1'
+    compile 'org.mongodb.morphia:morphia:0.105'
+    compile 'org.mongodb:mongo-java-driver:2.11.3'
+    compile 'postgresql:postgresql:9.1-901.jdbc3'
+    compile 'com.jolbox:bonecp:0.7.1.RELEASE'
+    compile 'org.neo4j:neo4j-rest-graphdb:2.0.0'
+    compile 'com.sun.jersey:jersey-core:1.9.1'
+    compile 'javax.validation:validation-api:1.0.0.GA'
+    compile 'org.hibernate:hibernate-validator:5.0.2.Final'
+    compile 'org.thymeleaf:thymeleaf-spring4:2.1.2.RELEASE'
+
+
+    testCompile 'junit:junit:4.11'
+}
+
+task wrapper(type:Wrapper){
+    gradleVersion='1.9'
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Yookos Recommendations Project: Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p>Recommendations based on mutual friend count and similar likes (Ranking in descending order)</p>
+
+
+<div style="border: 1px solid black; margin-bottom: 10px; clear: both; width: 400px;" th:each="item: ${results}">
+    <img style="margin: 5px; float: left;" width="100px" src="#" th:src="${item.fof.imageUrl}"/>
+
+    <p th:inline="text">[[${item.fof.name}]]</p>
+
+    <p th:inline="text">Mutual friends: <a href="#" th:href="'/friends/' + ${item.user.userid} + '/' + ${item.fof.userid}"> [[${item.count}]]</a></p>
+
+</div>
+
+</body>
+</html>
